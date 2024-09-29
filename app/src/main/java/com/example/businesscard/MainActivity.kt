@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material.icons.rounded.Phone
@@ -45,48 +46,43 @@ class MainActivity : ComponentActivity() {
 fun Greeting(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .padding(0.dp, 200.dp)
     ) {
-        Column(
-            modifier = modifier
-        ) {
-            var image = painterResource(R.drawable.android_logo)
-            Image(
-                painter = image,
-                contentDescription = "Andoird Icon",
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .padding(120.dp, 0.dp)
+        var image = painterResource(R.drawable.android_logo)
+        Image(
+            painter = image,
+            contentDescription = "Andoird Icon",
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(100.dp, 200.dp, 100.dp, 0.dp)
+        )
+        Text(
+            text = "Neous Simulta",
+            fontWeight = FontWeight.Normal,
+            fontSize = 40.sp,
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+        )
+        Text(
+            text = "Look back margin",
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp,
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(0.dp, 0.dp, 0.dp, 150.dp)
+        )
+        Row(
+            modifier = Modifier.weight(1f)
+                .padding(150.dp, 0.dp)
+                .align(Alignment.Start)
+        ){
+            Icon(
+                Icons.Rounded.Phone,
+                contentDescription = "Icon",
+                modifier = Modifier.padding(0.dp, 0.dp, 20.dp, 0.dp)
             )
             Text(
-                text = "Neous Simulta",
-                fontWeight = FontWeight.Normal,
-                fontSize = 40.sp,
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
+                text = "Hello world"
             )
-            Text(
-                text = "Look back margin",
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp,
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .padding(0.dp, 0.dp, 0.dp, 150.dp)
-            )
-            Row(
-                modifier = Modifier.weight(1f)
-                    .padding(150.dp, 0.dp)
-                    .align(Alignment.Start)
-            ){
-                Icon(
-                    Icons.Rounded.Phone,
-                    contentDescription = "Icon",
-                    modifier = Modifier.padding(0.dp, 0.dp, 20.dp, 0.dp)
-                )
-                Text(
-                    text = "Hello world"
-                )
-            }
         }
     }
 }

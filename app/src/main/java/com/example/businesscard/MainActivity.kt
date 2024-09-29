@@ -81,7 +81,7 @@ fun Greeting(modifier: Modifier = Modifier) {
                 modifier = Modifier.padding(0.dp, 0.dp, 20.dp, 0.dp)
             )
             Text(
-                text = "Hello world"
+                text = "Hello world people"
             )
         }
     }
